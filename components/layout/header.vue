@@ -3,9 +3,9 @@ const route = useRoute()
 const path = computed(() => route.path)
 
 const routes = [
-  { path: '/blogs', name: 'Blogs' },
-  { path: '/categories', name: 'Categories' },
-  { path: '/about', name: 'About Me' },
+  { path: '/blogs', name: '博客' },
+  { path: '/categories', name: '分类' },
+  { path: '/about', name: '关于' },
 ]
 </script>
 
@@ -17,7 +17,7 @@ const routes = [
       <ul class="flex items-baseline space-x-5">
         <li class="text-base sm:text-2xl font-bold">
           <NuxtLink to="/" :class="{ underline: path === '/' }">
-            XXXX
+            黄某人's Blog
           </NuxtLink>
         </li>
       </ul>
