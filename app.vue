@@ -1,6 +1,13 @@
 <template>
-  <div>
-    <div class="w-20 h-20 bg-black" />
-    <!-- <NuxtWelcome /> -->
+  <div class="bg-[#F1F2F4] dark:text-zinc-300 dark:bg-slate-950">
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>
+
+<style>
+html.dark {
+  color-scheme: dark;
+}
+</style>
