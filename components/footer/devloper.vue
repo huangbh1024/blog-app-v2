@@ -21,7 +21,7 @@
         class="p-2 bg-gray-300 text-gray-800 rounded-md"
         aria-label="bilibili"
       >
-        <Icon name="simple-icons:bilibili" size="1em" />
+        <Icon name="fa6-brands:bilibili" size="1em" />
       </NuxtLink>
     </div>
   </div>
