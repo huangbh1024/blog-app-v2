@@ -5,5 +5,5 @@ export default defineNuxtConfig({
     layoutTransition: { name: 'layout', mode: 'out-in' },
   },
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', 'nuxt-icon'],
+  modules: ['@nuxtjs/tailwindcss', 'nuxt-icon', '@nuxt/image'],
 })
