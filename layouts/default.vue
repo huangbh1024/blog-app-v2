@@ -7,7 +7,9 @@
       <div class="p-9" />
       <slot />
     </main>
-    <footer />
+    <footer>
+      <LayoutFooter />
+    </footer>
   </div>
 </template>
 
