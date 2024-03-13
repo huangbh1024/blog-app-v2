@@ -5,6 +5,7 @@ const path = computed(() => route.path)
 const routes = [
   { path: '/blogs', name: '博客' },
   { path: '/categories', name: '分类' },
+  { path: '/archivies', name: '归档' },
   { path: '/about', name: '关于' },
 ]
 </script>
