@@ -1,30 +1,46 @@
+<script lang="ts" setup>
+import type { ArchiveItem } from '@/types/archive'
+import type { BlogItem } from '@/types/blog'
+
+const blogs: BlogItem[] = [
+  {
+    title: '标题1',
+    description: '描述1',
+    id: 1,
+    createAt: '2024-01-01',
+    image: '',
+    tags: ['前端'],
+  },
+  {
+    title: '标题2',
+    description: '描述2',
+    id: 2,
+    createAt: '2024-01-01',
+    image: 'https://cdn.huangbh.cn/images/2.jpg',
+    tags: ['前端'],
+  },
+  {
+    title: '标题3',
+    description: '描述3',
+    id: 3,
+    createAt: '2024-01-01',
+    image: 'https://cdn.huangbh.cn/images/99.jpg',
+    tags: ['前端', 'JavaScript'],
+  },
+]
+
+const archivies: ArchiveItem[] = [
+  { id: 1, date: '2024', list: blogs },
+  { id: 2, date: '2023', list: blogs },
+  { id: 3, date: '2022', list: blogs },
+]
+</script>
+
 <template>
   <main class="container max-w-5xl mx-auto text-zinc-600">
     <ArchiveHero />
     <ul class="px-12">
-      <div class="select-none relative h-20 pointer-events-none">
-        <span
-          class="text-[8em] text-transparent absolute -left-12 -top-8 font-bold text-stroke-2 text-stroke-hex-aaa opacity-10"
-        >2024</span>
-      </div>
-      <div>
-        <NuxtLink
-          class="block font-normal mb-6 mt-2 no-underline cursor-pointer hover:underline"
-        >
-          <li
-            class="no-underline flex flex-col md:flex-row gap-2 md:items-center"
-          >
-            <div class="text-lg leading-[1.2em] flex gap-2 flex-wrap">
-              <span class="align-middle dark:text-zinc-400">测试1</span>
-            </div>
-            <div class="flex gap-2 items-center">
-              <span
-                class="text-sm opacity-50 whitespace-nowrap dark:opacity-100"
-              >2024-01-01</span>
-            </div>
-          </li>
-        </NuxtLink>
-      </div>
+      <ArchiveItem v-for="item in archivies" :key="item.id" v-bind="item" />
     </ul>
   </main>
 </template>
