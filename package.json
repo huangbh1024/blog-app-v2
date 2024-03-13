@@ -24,6 +24,7 @@
     "@commitlint/config-conventional": "^19.0.3",
     "@nuxt/image": "^1.4.0",
     "@nuxtjs/tailwindcss": "^6.11.4",
+    "@tailwindcss/forms": "^0.5.7",
     "@vueuse/core": "^10.9.0",
     "@vueuse/nuxt": "^10.9.0",
     "commitizen": "^4.3.0",
