@@ -8,10 +8,11 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "prepare": "husky install",
+    "prepare": "husky install & node scripts/init.js",
     "commit": "git-cz",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "deploy": "npm run build && node scripts/deploy.js"
   },
   "dependencies": {
     "nuxt": "^3.10.3",
@@ -28,13 +29,16 @@
     "@tailwindcss/forms": "^0.5.7",
     "@vueuse/core": "^10.9.0",
     "@vueuse/nuxt": "^10.9.0",
+    "chalk": "^5.3.0",
     "commitizen": "^4.3.0",
     "cz-git": "^1.9.0",
     "daisyui": "^4.7.3",
     "eslint": "^8.57.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
+    "node-ssh": "^13.1.0",
     "nuxt-icon": "^0.6.9",
+    "ora": "^8.0.1",
     "typescript": "^5.4.2"
   },
   "lint-staged": {
